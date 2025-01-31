@@ -1,0 +1,51 @@
+class Stack{
+    int a[] = new int[10];
+    int top = -1;
+    
+    public void push(int data){
+        if(top == a.length-1){
+            System.out.println("Stack is full.");
+        }
+        else{
+            top++;
+            a[top] = data;
+        }
+    }
+    public void pop(){
+        if(top == -1){
+            System.out.println("stack is empty.");
+        }else{
+            top--;
+        }
+    }
+    public void peak(){
+        if(top == -1){
+            System.out.println("stack is empty.");
+        }else{
+            System.out.println("top of the element:" +a[top]);
+        }
+    }
+    public void display()
+    {
+        for(int i=top; i>=0;i--){
+            System.out.println("display the element:" +a[i]);
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Stack s = new Stack();
+	    s.push(10);
+	    s.push(20);
+	    s.push(30);
+	    s.push(40);
+	    s.push(50);
+	    s.push(60);
+	    s.push(70);
+	    s.pop();
+	    s.pop();
+	    s.peak();
+	    s.display();
+     }
+  }
